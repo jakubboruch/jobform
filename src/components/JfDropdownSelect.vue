@@ -5,7 +5,9 @@
       <span>{{ label }}</span>
       <jf-info-button class="jf-dropdown-select__info" right v-if="info">{{ info }}</jf-info-button>
     </p>
-    <div class="jf-dropdown-select__wrapper" v-jf-clickaway="closeDropdown">
+    <div class="jf-dropdown-select__wrapper"
+         v-jf-clickaway="closeDropdown"
+         @keyup.escape="closeDropdown">
       <div class="jf-dropdown-select__field"
            @click="toggleDropdown"
            @keyup.space="toggleDropdown"
