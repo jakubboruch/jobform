@@ -33,11 +33,13 @@ export default {
     JfInfoButton,
   },
   props: {
-    label: String,
-    info: String,
-    required: {
-      type: Boolean,
-      default: false,
+    label: {
+      type: String,
+      default: '',
+    },
+    info: {
+      type: String,
+      default: '',
     },
     disabled: {
       type: Boolean,
@@ -45,6 +47,7 @@ export default {
     },
     name: {
       type: String,
+      default: '',
       required: true,
     },
     errors: {

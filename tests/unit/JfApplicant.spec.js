@@ -1,5 +1,4 @@
 import { shallowMount } from '@vue/test-utils';
-import Vue from 'vue';
 import JfApplicant from '@/components/JfApplicant.vue';
 
 describe('JfApplicant.vue', () => {

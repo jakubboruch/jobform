@@ -1,6 +1,6 @@
 <template>
   <div class="jf-dropdown-list">
-     <slot name="filter"></slot>
+    <slot name="filter"></slot>
     <div class="jf-dropdown-list__wrapper">
       <slot></slot>
     </div>
@@ -11,18 +11,6 @@
 
 export default {
   name: 'JfDropdownList',
-  data() {
-    return {
-      active: false,
-    };
-  },
-  props: {
-  },
-  methods: {
-    toggleItem() {
-      this.active = !this.active;
-    },
-  },
 };
 </script>
 

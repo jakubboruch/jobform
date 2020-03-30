@@ -67,7 +67,7 @@ export default {
     },
     name: {
       type: String,
-      defailt: '',
+      required: true,
     },
     info: {
       type: String,

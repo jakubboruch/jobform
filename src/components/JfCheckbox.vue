@@ -46,6 +46,7 @@ export default {
     checked: {
       type: Boolean,
       default: false,
+      required: true,
     },
     disabled: {
       type: Boolean,

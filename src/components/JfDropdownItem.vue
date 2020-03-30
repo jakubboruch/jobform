@@ -28,7 +28,7 @@ export default {
     },
     id: {
       type: Number,
-      default: 0,
+      required: true,
     },
     value: {
       type: Boolean,
