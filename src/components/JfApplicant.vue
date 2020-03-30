@@ -39,6 +39,7 @@ export default {
   props: {
     applicant: {
       type: Object,
+      required: true,
       default: () => ({
         name: '',
         email: '',
