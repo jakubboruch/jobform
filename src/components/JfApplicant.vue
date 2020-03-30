@@ -48,9 +48,6 @@ export default {
     },
   },
   methods: {
-    updateValue($event) {
-      this.$emit('input', this.localValue, $event);
-    },
     getHiddenSkillsCount(containerWidth, containerOffsetLeft) {
       const skillClassName = 'jf-applicant__skill';
       const skills = Array.from(this.$refs.skills.getElementsByClassName(skillClassName));

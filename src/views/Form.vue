@@ -32,7 +32,11 @@
         <JfButton @click="validateForm">Send</JfButton>
       </div>
     </div>
-    <JfToast v-show="toast.show" :success="toast.success">{{ toast.message }}</JfToast>
+    <JfToast v-show="toast.show"
+             :success="toast.success"
+             @hide="toast.show = false">
+      {{ toast.message }}
+    </JfToast>
   </div>
 </template>
 
@@ -153,7 +157,7 @@ export default {
       return re.test(email);
     },
     showToast(success, message) {
-      const displayTime = 3000;
+      const displayTime = 5000;
       this.toast.show = true;
       this.toast.success = success;
       this.toast.message = message;

@@ -1,4 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
+import Vue from 'vue';
 import JfApplicant from '@/components/JfApplicant.vue';
 
 describe('JfApplicant.vue', () => {
@@ -75,13 +76,13 @@ describe('JfApplicant.vue', () => {
       },
     });
   });
-  it("should have 'applicant' of type Object with default values.", () => {
+  it('should have "applicant" of type Object with default values.', () => {
     const applicant = wrapper.vm.$options.props.applicant;
     expect(applicant.required).toBeTruthy();
     expect(applicant.type).toBe(Object);
     expect(applicant.default()).toEqual({ name: '', email: '', skills: [] });
   });
-  it("'skills' should return concatenated values", () => {
+  it('"skills" should return concatenated values', () => {
     expect(wrapper.vm.skills).toEqual('Vue.js + React.js + Angular + Svelte.js + Bootstrap + Three.js + Webpack + Gulp + Grunt + D3');
   });
 });
