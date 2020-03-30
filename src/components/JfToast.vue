@@ -20,12 +20,9 @@ export default {
     },
   },
   props: {
-    show: {
-      type: Boolean,
-      default: false,
-    },
     success: {
       type: Boolean,
+      required: false,
       default: false,
     },
   },

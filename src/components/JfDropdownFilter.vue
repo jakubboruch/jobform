@@ -26,12 +26,9 @@ export default {
     value: {
       type: Array,
       default: () => (
-        [{ name: 'Vue4', id: '0' }]
+        [{ name: '' }]
       ),
     },
-  },
-  created() {
-
   },
   methods: {
     update($event) {
