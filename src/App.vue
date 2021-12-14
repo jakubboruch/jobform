@@ -1,20 +1,27 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="main">
+    <div class="main__wrapper">
+      <div id="nav">
+        <router-link name="form" to="/">applicant form</router-link>
+        |
+        <router-link name="list" to="/list">applicants list</router-link>
+      </div>
     </div>
-    <router-view/>
+    <div class="main__wrapper">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
+@import '@/assets/styles/_variables';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: $pelorous;
+
 }
 
 #nav {
@@ -22,11 +29,19 @@
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: $font-color-form;
+    text-decoration: none;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: $pelorous;
     }
+  }
+}
+
+.main {
+  &__wrapper {
+    max-width: 312px;
+    margin: 0 auto;
   }
 }
 </style>
